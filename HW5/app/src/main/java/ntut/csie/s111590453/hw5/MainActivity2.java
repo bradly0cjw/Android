@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,15 @@ public class MainActivity2 extends AppCompatActivity {
         
         // calc bmi
         button.setOnClickListener(v -> {
+            //show toast if input is invalid
+            if (et1.getText().toString().isEmpty() ) {
+                Toast.makeText(this, "請輸入身高", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (et2.getText().toString().isEmpty() ) {
+                Toast.makeText(this, "請輸入體重", Toast.LENGTH_SHORT).show();
+                return;
+            }
             try {
                 double weight = Double.parseDouble(et2.getText().toString());
                 double height = Double.parseDouble(et1.getText().toString());
