@@ -126,7 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="排序科目"
+        android:text="科目排序"
         android:textSize="20sp"
         app:cornerRadius="0px"
         app:layout_constraintBottom_toBottomOf="parent"
